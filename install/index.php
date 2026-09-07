@@ -362,7 +362,7 @@ if ($action !== '') {
 
         mirza_install_telegram($values['APIKEY'], 'sendMessage', [
             'chat_id' => $values['adminnumber'],
-            'text' => 'ربات میرزا روی هاست نصب شد. برای شروع دستور /start را بفرستید.',
+            'text' => 'ربات Root Bot روی هاست نصب شد. برای شروع دستور /start را بفرستید.',
         ]);
 
         mirza_install_json([
@@ -389,7 +389,7 @@ $host = mirza_install_host();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <title>نصب ربات میرزا</title>
+    <title>نصب ربات Root Bot</title>
     <style>
         @font-face {
             font-family: Vazirmatn;
@@ -1172,7 +1172,7 @@ $host = mirza_install_host();
 <body>
     <div class="wrap">
         <header class="top">
-            <h1>نصب ربات میرزا</h1>
+            <h1>نصب ربات Root Bot</h1>
             <p>دامنه <b><?php echo htmlspecialchars($host, ENT_QUOTES, 'UTF-8'); ?></b></p>
         </header>
 

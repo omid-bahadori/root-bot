@@ -24,7 +24,7 @@
     <img src="https://img.shields.io/github/issues/omid-bahadori/root-bot?style=flat-square" alt="Issues"/>
   </a>
   <a href="https://github.com/omid-bahadori/root-bot/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/mahdiMGF2/mirzabot?style=flat-square" alt="License"/>
+    <img src="https://img.shields.io/github/license/omid-bahadori/root-bot?style=flat-square" alt="License"/>
   </a>
   <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP 8.2"/>
 </p>
@@ -157,9 +157,9 @@ curl -o install.sh -L https://raw.githubusercontent.com/omid-bahadori/root-bot/m
 An interactive menu will appear:
 
 ```
-1) Install Mirza
-2) Update Mirza
-3) Remove Mirza
+1) Install Root Bot
+2) Update Root Bot
+3) Remove Root Bot
 4) Migrate: Free → Pro (Beta)
 5) Renew SSL certificate
 6) Help & Parameters
@@ -188,9 +188,9 @@ You can also drive the installer entirely from the command line — handy for au
 
 | Command | Description |
 |---------|-------------|
-| `install` | Install Mirza |
-| `update` | Update Mirza (choose channel / version) |
-| `remove` | Remove Mirza and its services |
+| `install` | Install Root Bot |
+| `update` | Update Root Bot (choose channel / version) |
+| `remove` | Remove Root Bot and its services |
 | `migrate` | Migrate Free → Pro |
 | `renew` | Renew the bot's SSL certificate |
 | `menu` | Open the interactive panel (default) |
@@ -275,7 +275,7 @@ Thanks to everyone who has contributed to making Root Bot better:
 
 <div align="center">
 
-**Made with ❤️ by the Mirza Panel community**
+**Made with ❤️ for the Root Bot community**
 
 💬 [Channel](https://t.me/mirzapanel) · 👥 [Group](https://t.me/mirzapanelgroup) · ⭐ [Star on GitHub](https://github.com/omid-bahadori/root-bot)
 

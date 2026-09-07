@@ -50,4 +50,4 @@ if ($failures !== []) {
     exit(1);
 }
 
-fwrite(STDOUT, "Mirza smoke tests passed (" . (count($httpMethods) + count($panelMethods) + 7) . " checks)." . PHP_EOL);
+fwrite(STDOUT, "Root Bot smoke tests passed (" . (count($httpMethods) + count($panelMethods) + 7) . " checks)." . PHP_EOL);

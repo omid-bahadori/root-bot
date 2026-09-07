@@ -1814,7 +1814,7 @@ Current time: ',
                         'on' => 'Turned on',
                         'intro' => '📌 From the list below you can manage the gateways.
 
-⚠️ The Mirza team gives no guarantee for the gateways, and all use and responsibility is on you',
+⚠️ The Root Bot team gives no guarantee for the gateways, and all use and responsibility is on you',
                         'btnPerfectMoneyHelp' => '📚 Set up Perfect Money tutorial',
                         'askPlisioApi' => '⚙️ Please send your Plisio API Key.
 
@@ -2401,12 +2401,12 @@ Current amount: %s',
 ➖➖➖➖➖➖➖➖➖➖➖
 🔹 | Also, if you need <b>guidance</b> or help, you can contact the support team via direct message.
 
-📩 | To send a report, suggestion, or request for guidance, leave a message in the <b>Mirza group</b>:
-<a href="https://t.me/mirzapanelgroup" rel="nofollow" target="_blank">Mirza Group</a>',
+📩 | To send a report, suggestion, or request for guidance, leave a message in the <b>Root Bot group</b>:
+<a href="https://t.me/mirzapanelgroup" rel="nofollow" target="_blank">Root Bot Group</a>',
                         'aboutBot' => '💎 | Version Bot: %s
 📌 | Version Mini App: 0.1.1
 
-<blockquote>🔹 | This bot is completely free and is developed by the Mirza team</blockquote>
+<blockquote>🔹 | This bot is completely free and is developed by the Root Bot team</blockquote>
 
 <blockquote>🔹 | Any sale or charging of money for this bot is considered a violation.</blockquote>
 
@@ -4171,7 +4171,7 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'zarinPalMerchant' => 'ZarinPal merchant',
                 'zeroBalance' => '0️⃣ Reset balance to zero',
                 'panelSetting' => '🎛 Panel Settings',
-                'mirzaAgentPanel' => 'Mirza Agent',
+                'mirzaAgentPanel' => 'Root Bot Agent',
                 'setGroupName' => '🎛 Set group name',
                 'subLinkDomain' => '🔗 Subscription link domain',
                 'panelTypeSanaei' => 'Sanaei single port',
@@ -4280,10 +4280,10 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'jsSidebarCollapsed' => 'Collapsed menu enabled',
                 'jsSidebarExpanded' => 'Open menu enabled',
                 'jsThemeActivated' => 'Theme «{name}» enabled',
-                'keyboardManageTitle' => 'Mirza Bot Admin Panel',
+                'keyboardManageTitle' => 'Root Bot Admin Panel',
                 'keyboardSaveBtn' => 'Back to default mode',
                 'keyboardSortHint' => 'Back to user panel',
-                'layoutBrandName' => 'Mirza Bot Admin Panel',
+                'layoutBrandName' => 'Root Bot Admin Panel',
                 'layoutDefaultAdminName' => 'Admin',
                 'layoutFooterCopyright' => 'Dashboard',
                 'layoutFooterLinkDocs' => 'Settings',
@@ -4300,7 +4300,7 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'layoutNavLogout' => 'Management',
                 'layoutNavOrders' => 'Yes, continue',
                 'layoutNavPayments' => '· Panel',
-                'layoutNavProducts' => 'Mirza',
+                'layoutNavProducts' => 'Root Bot',
                 'layoutNavServices' => 'Cancel',
                 'layoutNavSettings' => 'Dashboard',
                 'layoutNavUsers' => 'Are you sure? This operation is irreversible.',
@@ -4313,7 +4313,7 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'layoutPageTitleProduct' => 'Products',
                 'layoutPageTitleService' => 'Services',
                 'layoutPageTitleSettings' => 'Settings',
-                'layoutPageTitleSuffix' => 'Mirza',
+                'layoutPageTitleSuffix' => 'Root Bot',
                 'layoutPageTitleUsers' => 'Users',
                 'layoutProfileMenuLabel' => 'Settings',
                 'layoutSearchBoxPlaceholder' => 'Transactions',
@@ -4323,11 +4323,11 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'loginEnterCredentials' => 'Enter your username and password.',
                 'loginErrorTitle' => 'Password',
                 'loginFooter' => 'Username',
-                'loginHeading' => 'Mirza Admin Panel',
+                'loginHeading' => 'Root Bot Admin Panel',
                 'loginHidePassword' => 'Access to this panel is only allowed for authorized administrators.',
-                'loginPanelTitle' => 'Login — Mirza Admin Panel',
-                'loginPasswordLabel' => 'Mirza Admin Panel',
-                'loginPasswordPlaceholder' => '· Version 1.0 Mirza',
+                'loginPanelTitle' => 'Login — Root Bot Admin Panel',
+                'loginPasswordLabel' => 'Root Bot Admin Panel',
+                'loginPasswordPlaceholder' => '· Version 1.0 Root Bot',
                 'loginRememberMe' => 'To manage the bot, enter your account information.',
                 'loginShowPassword' => 'Login to panel',
                 'loginSubtitle' => 'To support, please ',

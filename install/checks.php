@@ -430,7 +430,7 @@ function mirza_install_http_probe(string $url, int $timeout = 12): array
         CURLOPT_CONNECTTIMEOUT => $timeout,
         CURLOPT_SSL_VERIFYPEER => true,
         CURLOPT_SSL_VERIFYHOST => 2,
-        CURLOPT_USERAGENT => 'MirzaInstaller',
+        CURLOPT_USERAGENT => 'RootBotInstaller',
     ]);
 
     $body = curl_exec($handle);
@@ -498,7 +498,7 @@ function mirza_install_required_files(): array
         'alireza_single.php' => 'پنل علیرضا',
         'x-ui_single.php' => 'پنل X-UI',
         'mikrotik.php' => 'پنل میکروتیک',
-        'mirza_agent.php' => 'ایجنت میرزا',
+        'mirza_agent.php' => 'ایجنت Root Bot',
         'Rebecca.php' => 'پنل ربکا',
         'WGDashboard.php' => 'پنل WGDashboard',
         'ibsng.php' => 'پنل IBSng',
