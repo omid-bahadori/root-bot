@@ -1,6 +1,6 @@
 # خط مبنای نسخه‌ی شخصی Root Bot
 
-این سند خط مبنای بررسی مخزن `mahdiMGF2/mirzabot` در تاریخ ۲۰۲۶-۰۹-۰۷ است و مبنای تغییرات مرحله‌ای بعدی قرار می‌گیرد. هیچ قابلیت فعلی در این مرحله حذف نشده است.
+این سند خط مبنای بررسی مخزن `omid-bahadori/root-bot` در تاریخ ۲۰۲۶-۰۹-۰۷ است و مبنای تغییرات مرحله‌ای بعدی قرار می‌گیرد. هیچ قابلیت فعلی در این مرحله حذف نشده است.
 
 ## معماری و نقاط ورود
 
@@ -25,7 +25,7 @@
 
 ## پیکربندی و اسرار
 
-`config.php` در وضعیت فعلی شامل placeholderهای مربوط به اتصال MySQL، توکن Telegram، شناسه مدیر، دامنه و نام ربات است. اعتبار پنل‌ها، درگاه‌ها و botهای اضافی نیز در دیتابیس ذخیره می‌شود. از این مرحله، همین مقادیر می‌توانند بدون تغییر رفتار نصب فعلی از environment نیز خوانده شوند: `MIRZA_DB_HOST`, `MIRZA_DB_NAME`, `MIRZA_DB_USER`, `MIRZA_DB_PASSWORD`, `MIRZA_TELEGRAM_BOT_TOKEN`, `MIRZA_ADMIN_CHAT_ID`, `MIRZA_DOMAIN`, `MIRZA_BOT_USERNAME` و `MIRZA_BRAND_NAME`. مقدار environment فقط در صورت تعریف‌شدن اولویت دارد. `MIRZA_BRAND_NAME` نام نمایشی است و به‌صورت پیش‌فرض `Root Bot` است؛ نام کلاس‌ها، جدول‌ها، مسیرهای legacy و attribution پروژه تغییر نمی‌کند. فایل‌های runtime مانند `error_log`, `storage/`, `api/hash.txt` و خروجی‌های Excel نباید در release یا backup عمومی قرار گیرند.
+`config.php` در وضعیت فعلی شامل placeholderهای مربوط به اتصال MySQL، توکن Telegram، شناسه مدیر، دامنه و نام ربات است. اعتبار پنل‌ها، درگاه‌ها و botهای اضافی نیز در دیتابیس ذخیره می‌شود. مقادیر پیکربندی می‌توانند از environment نیز خوانده شوند: `ROOTBOT_DB_HOST`, `ROOTBOT_DB_NAME`, `ROOTBOT_DB_USER`, `ROOTBOT_DB_PASSWORD`, `ROOTBOT_TELEGRAM_BOT_TOKEN`, `ROOTBOT_ADMIN_CHAT_ID`, `ROOTBOT_DOMAIN`, `ROOTBOT_BOT_USERNAME` و `ROOTBOT_BRAND_NAME`. مقدار environment فقط در صورت تعریف‌شدن اولویت دارد. `ROOTBOT_BRAND_NAME` نام نمایشی است و به‌صورت پیش‌فرض `Root Bot` است؛ شناسه‌های فنی، جدول‌ها و مسیرها نیز از نام‌گذاری Root Bot استفاده می‌کنند. فایل‌های runtime مانند `error_log`, `storage/`, `api/hash.txt` و خروجی‌های Excel نباید در release یا backup عمومی قرار گیرند.
 
 ## کنترل‌های موجود
 
@@ -44,7 +44,7 @@
 4. مسیرهای عمومی API، tokenهای کاربر، احراز Mini App و نشست پنل باید یکپارچه و با timeout/rotation/rate limit قابل کنترل شوند.
 5. migration runner خطاها را log می‌کند و در برخی موارد ادامه می‌دهد؛ migrationهای بحرانی باید وضعیت و fail-fast مشخص داشته باشند.
 6. تست خودکار رسمی برای وبهوک، پرداخت، adapterها و cronها در مخزن وجود ندارد.
-7. migrationهای موفق اکنون در جدول داخلی `mirza_schema_migrations` ثبت می‌شوند و backupهای موقت با نام تصادفی و permission `0600` ساخته و پس از استفاده حذف می‌شوند.
+7. migrationهای موفق اکنون در جدول داخلی `rootbot_schema_migrations` ثبت می‌شوند و backupهای موقت با نام تصادفی و permission `0600` ساخته و پس از استفاده حذف می‌شوند.
 8. installer اکنون با `umask 077` اجرا می‌شود، لاگ مرحله‌ای را خصوصی می‌کند، قبل از self-update نسخه‌ی قبلی را در `/root/install.sh.bak` نگه می‌دارد و config تولیدی را پس از کپی با permission `0640` تنظیم می‌کند.
 
 ## معیار پذیرش مراحل بعد

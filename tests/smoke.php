@@ -42,7 +42,7 @@ $assert(str_contains($installer, 'umask 077'), 'Installer private umask is missi
 $assert(str_contains($installer, 'install -m 0755 "$TEMP_FILE" "${MASTER_PATH}.new"'), 'Atomic self-update staging is missing');
 
 $config = (string) file_get_contents($root . '/config.php');
-$assert(str_contains($config, "MIRZA_BRAND_NAME"), 'Configurable display brand is missing');
+$assert(str_contains($config, "ROOTBOT_BRAND_NAME"), 'Configurable display brand is missing');
 $assert(str_contains($config, "\$brandname = 'Root Bot';"), 'Default display brand is missing');
 
 if ($failures !== []) {

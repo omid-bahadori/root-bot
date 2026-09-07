@@ -2402,7 +2402,7 @@ Current amount: %s',
 🔹 | Also, if you need <b>guidance</b> or help, you can contact the support team via direct message.
 
 📩 | To send a report, suggestion, or request for guidance, leave a message in the <b>Root Bot group</b>:
-<a href="https://t.me/mirzapanelgroup" rel="nofollow" target="_blank">Root Bot Group</a>',
+<a href="https://t.me/rootbotgroup" rel="nofollow" target="_blank">Root Bot Group</a>',
                         'aboutBot' => '💎 | Version Bot: %s
 📌 | Version Mini App: 0.1.1
 
@@ -4171,7 +4171,7 @@ We hope you had a good experience with the ease and speed of your service. If yo
                 'zarinPalMerchant' => 'ZarinPal merchant',
                 'zeroBalance' => '0️⃣ Reset balance to zero',
                 'panelSetting' => '🎛 Panel Settings',
-                'mirzaAgentPanel' => 'Root Bot Agent',
+                'rootbotAgentPanel' => 'Root Bot Agent',
                 'setGroupName' => '🎛 Set group name',
                 'subLinkDomain' => '🔗 Subscription link domain',
                 'panelTypeSanaei' => 'Sanaei single port',

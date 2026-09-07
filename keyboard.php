@@ -1121,7 +1121,7 @@ $keyboardtypepanel = json_encode([
         ],
         [
             ['text' => $textbotlang['keyboard']['passargadPanel'], 'callback_data' => "typepanel#pasarguard"],
-            ['text' => $textbotlang['keyboard']['mirzaAgentPanel'], 'callback_data' => "typepanel#mirza_agent"]
+            ['text' => $textbotlang['keyboard']['rootbotAgentPanel'], 'callback_data' => "typepanel#rootbot_agent"]
         ],
         [
             ['text' => $textbotlang['keyboard']['panelTypeSanaei'], 'callback_data' => 'typepanel#x-ui_single'],
@@ -1580,7 +1580,7 @@ $keyboard_stat = json_encode([
         ]
     ]
 ]);
-$option_mirza = json_encode([
+$option_rootbot = json_encode([
     'keyboard' => [
         [['text' => $textbotlang['keyboard']['panelFeatureStatus']]],
         [['text' => $textbotlang['keyboard']['panelName']], ['text' => $textbotlang['keyboard']['deletePanel']]],

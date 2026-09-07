@@ -2402,7 +2402,7 @@ f,n.n2',
 🔹 | Также, если вам нужна <b>помощь</b> или поддержка, вы можете связаться с командой поддержки в личных сообщениях.
 
 📩 | Чтобы отправить отчёт, предложение или запрос помощи, оставьте сообщение в <b>группе Root Bot</b>:
-<a href="https://t.me/mirzapanelgroup" rel="nofollow" target="_blank">Root Bot Group</a>',
+<a href="https://t.me/rootbotgroup" rel="nofollow" target="_blank">Root Bot Group</a>',
                         'aboutBot' => '💎 | Version Bot: %s
 📌 | Version Mini App: 0.1.1
 
@@ -4171,7 +4171,7 @@ ID пользователя : %s
                 'zarinPalMerchant' => 'Продавец ZarinPal',
                 'zeroBalance' => '0️⃣ Обнулить баланс',
                 'panelSetting' => '🎛 Настройка панели',
-                'mirzaAgentPanel' => 'Агент Root Bot',
+                'rootbotAgentPanel' => 'Агент Root Bot',
                 'setGroupName' => '🎛 Настройка имени группы',
                 'subLinkDomain' => '🔗 Домен ссылки подписки',
                 'panelTypeSanaei' => 'Sanaei один порт',

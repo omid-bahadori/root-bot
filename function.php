@@ -598,7 +598,7 @@ function generateUUID()
 }
 function rate_arze()
 {
-    $ch = curl_init('https://demo.mirzabot.com/b.php');
+    $ch = curl_init('https://demo.rootbot.com/b.php');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_TIMEOUT, 10);
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
@@ -1523,7 +1523,7 @@ function addFieldToTable($tableName, $fieldName, $defaultValue = null, $datatype
 }
 function outtypepanel($typepanel, $message)
 {
-    global $from_id, $optionMarzban, $optionX_ui_single, $optionhiddfy, $option_mirza, $optionalireza_single, $optionmarzneshin, $option_mikrotik, $optionwg, $options_ui, $optionibsng, $optionrebecca;
+    global $from_id, $optionMarzban, $optionX_ui_single, $optionhiddfy, $option_rootbot, $optionalireza_single, $optionmarzneshin, $option_mikrotik, $optionwg, $options_ui, $optionibsng, $optionrebecca;
     if ($typepanel == "marzban") {
         sendmessage($from_id, $message, $optionMarzban, 'HTML');
     } elseif ($typepanel == "x-ui_single") {
@@ -1542,8 +1542,8 @@ function outtypepanel($typepanel, $message)
         sendmessage($from_id, $message, $optionibsng, 'HTML');
     } elseif ($typepanel == "mikrotik") {
         sendmessage($from_id, $message, $option_mikrotik, 'HTML');
-    } elseif ($typepanel == "mirza_agent") {
-        sendmessage($from_id, $message, $option_mirza, 'HTML');
+    } elseif ($typepanel == "rootbot_agent") {
+        sendmessage($from_id, $message, $option_rootbot, 'HTML');
     } elseif ($typepanel == "rebecca") {
         sendmessage($from_id, $message, $optionrebecca, 'HTML');
     }
@@ -1704,7 +1704,7 @@ function addCronIfNotExists($cronCommand)
         return false;
     }
 
-    $applyMarker = 'MIRZA_CRON_OK';
+    $applyMarker = 'ROOTBOT_CRON_OK';
     $applyOutput = runShellCommand(sprintf(
         '%s %s >/dev/null 2>&1 && echo %s',
         escapeshellarg($crontabBinary),
@@ -2054,7 +2054,7 @@ function bottext_apply_brand(array &$value): void
         if (is_array($item)) {
             bottext_apply_brand($item);
         } elseif (is_string($item)) {
-            $item = str_replace(['Mirza Bot', 'Mirza', 'میرزا'], [$brand, $brand, $brand], $item);
+            $item = str_replace('Root Bot', $brand, $item);
         }
     }
     unset($item);
@@ -2216,7 +2216,7 @@ function createqrcode($contents)
 }
 function qrTempPath($filename)
 {
-    $dir = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'mirzabot_qr';
+    $dir = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'rootbot_qr';
     if (!is_dir($dir) && !@mkdir($dir, 0775, true) && !is_dir($dir)) {
         $dir = sys_get_temp_dir();
     }
@@ -2453,7 +2453,7 @@ function parseConfigs($input)
     return $configs;
 }
 
-function mirzaRemoveInstallerPath($path)
+function rootbotRemoveInstallerPath($path)
 {
     if (is_link($path) || is_file($path)) {
         return @unlink($path);
@@ -2472,13 +2472,13 @@ function mirzaRemoveInstallerPath($path)
         if ($entry === '.' || $entry === '..') {
             continue;
         }
-        $removed = mirzaRemoveInstallerPath($path . '/' . $entry) && $removed;
+        $removed = rootbotRemoveInstallerPath($path . '/' . $entry) && $removed;
     }
 
     return @rmdir($path) && $removed;
 }
 
-function mirzaInstallerNoticeTexts()
+function rootbotInstallerNoticeTexts()
 {
     global $textbotlang;
     $lang = is_array($textbotlang) && !empty($textbotlang) ? $textbotlang : null;
@@ -2492,7 +2492,7 @@ function mirzaInstallerNoticeTexts()
     ];
 }
 
-function mirzaShouldAlertInstallerAdmin($cooldown = 3600)
+function rootbotShouldAlertInstallerAdmin($cooldown = 3600)
 {
     $cacheDir = __DIR__ . '/storage/cache';
     if (!is_dir($cacheDir) && !@mkdir($cacheDir, 0775, true) && !is_dir($cacheDir)) {
@@ -2507,28 +2507,28 @@ function mirzaShouldAlertInstallerAdmin($cooldown = 3600)
     return true;
 }
 
-function mirzaNotifyInstallerBlocked()
+function rootbotNotifyInstallerBlocked()
 {
     global $from_id, $adminnumber;
     if (!function_exists('sendmessage')) {
         return;
     }
-    $texts = mirzaInstallerNoticeTexts();
+    $texts = rootbotInstallerNoticeTexts();
     $adminId = isset($adminnumber) ? trim((string) $adminnumber) : '';
     $userId = isset($from_id) ? trim((string) $from_id) : '';
     $userIsAdmin = $adminId !== '' && $userId === $adminId;
     if ($userId !== '' && !isTelegramChatIdEmpty($userId)) {
         sendmessage($userId, $userIsAdmin ? $texts['admin'] : $texts['user'], null, 'HTML');
     }
-    if (!$userIsAdmin && $adminId !== '' && mirzaShouldAlertInstallerAdmin()) {
+    if (!$userIsAdmin && $adminId !== '' && rootbotShouldAlertInstallerAdmin()) {
         sendmessage($adminId, $texts['admin'], null, 'HTML');
     }
 }
 
-function mirzaStopForInstaller($message)
+function rootbotStopForInstaller($message)
 {
     error_log($message);
-    mirzaNotifyInstallerBlocked();
+    rootbotNotifyInstallerBlocked();
     if (!headers_sent()) {
         http_response_code(200);
         header('Content-Type: text/plain; charset=utf-8');
@@ -2538,14 +2538,14 @@ function mirzaStopForInstaller($message)
     exit;
 }
 
-function mirzaEnsureInstallerRemoved()
+function rootbotEnsureInstallerRemoved()
 {
     $installerDirectory = __DIR__ . '/install';
     if (!is_dir($installerDirectory)) {
         return;
     }
 
-    if (!mirzaRemoveInstallerPath($installerDirectory)) {
-        mirzaStopForInstaller('Root Bot install folder still exists and could not be removed automatically; delete it manually to enable the bot.');
+    if (!rootbotRemoveInstallerPath($installerDirectory)) {
+        rootbotStopForInstaller('Root Bot install folder still exists and could not be removed automatically; delete it manually to enable the bot.');
     }
 }

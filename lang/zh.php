@@ -2402,7 +2402,7 @@ f,n.n2',
 🔹 | 此外，如果您需要<b>指导</b>或帮助，可以通过私信联系客服团队。
 
 📩 | 要发送报告、建议或请求指导，请在 <b>Root Bot 群组</b>中留言：
-<a href="https://t.me/mirzapanelgroup" rel="nofollow" target="_blank">Root Bot Group</a>',
+<a href="https://t.me/rootbotgroup" rel="nofollow" target="_blank">Root Bot Group</a>',
                         'aboutBot' => '💎 | Version Bot: %s
 📌 | Version Mini App: 0.1.1
 
@@ -4171,7 +4171,7 @@ f,n.n2',
                 'zarinPalMerchant' => 'ZarinPal 商户',
                 'zeroBalance' => '0️⃣ 余额清零',
                 'panelSetting' => '🎛 面板设置',
-                'mirzaAgentPanel' => 'Root Bot 代理',
+                'rootbotAgentPanel' => 'Root Bot 代理',
                 'setGroupName' => '🎛 设置群组名称',
                 'subLinkDomain' => '🔗 订阅链接域名',
                 'panelTypeSanaei' => 'Sanaei 单端口',

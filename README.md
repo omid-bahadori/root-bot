@@ -5,10 +5,10 @@
 ### A powerful Telegram bot for selling VPN services — with fully automated config creation.
 
 <p>
-  <a href="https://t.me/mirzapanel">
+  <a href="https://t.me/rootbot">
     <img src="https://img.shields.io/badge/Telegram-Channel-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Channel"/>
   </a>
-  <a href="https://t.me/mirzapanelgroup">
+  <a href="https://t.me/rootbotgroup">
     <img src="https://img.shields.io/badge/Telegram-Group-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Group"/>
   </a>
 </p>
@@ -213,18 +213,18 @@ You can also drive the installer entirely from the command line — handy for au
 
 ```bash
 # Auto-pick the best channel
-mirza install --channel auto
+rootbot install --channel auto
 
 # Fully non-interactive install
-mirza install --name myvpnbot --token 123:ABC \
+rootbot install --name myvpnbot --token 123:ABC \
               --admin 111 --domain bot.example.com --version 0.1.7
 
 # Update to a specific version or channel
-mirza update --version 0.1.6
-mirza update --channel release
+rootbot update --version 0.1.6
+rootbot update --channel release
 
 # Remove
-mirza remove
+rootbot remove
 ```
 
 ---
@@ -239,7 +239,7 @@ mirza remove
 | Advanced customization & analytics | — | ✅ |
 | Enhanced management & extra modules | — | ✅ |
 
-📌 **Pro purchase guide:** [View on Telegram »](https://t.me/mirzaperimium/4)
+📌 **Pro purchase guide:** [View on Telegram »](https://t.me/rootbotpremium/4)
 
 ---
 
@@ -277,6 +277,6 @@ Thanks to everyone who has contributed to making Root Bot better:
 
 **Made with ❤️ for the Root Bot community**
 
-💬 [Channel](https://t.me/mirzapanel) · 👥 [Group](https://t.me/mirzapanelgroup) · ⭐ [Star on GitHub](https://github.com/omid-bahadori/root-bot)
+💬 [Channel](https://t.me/rootbot) · 👥 [Group](https://t.me/rootbotgroup) · ⭐ [Star on GitHub](https://github.com/omid-bahadori/root-bot)
 
 </div>

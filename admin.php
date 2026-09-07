@@ -682,7 +682,7 @@ if (in_array($text, $textadmin) || $datain == "admin") {
         savedata("save", "username", "null");
         savedata("save", "password", "null");
         return;
-    } elseif ($userdata['type'] == "s_ui" || $userdata['type'] == "WGDashboard" || $userdata['type'] == "x-ui_single" || $userdata['type'] == "mirza_agent" || $userdata['type'] == "rebecca") {
+    } elseif ($userdata['type'] == "s_ui" || $userdata['type'] == "WGDashboard" || $userdata['type'] == "x-ui_single" || $userdata['type'] == "rootbot_agent" || $userdata['type'] == "rebecca") {
         sendmessage($from_id, $textbotlang['Admin']['agentbot']['askToken'], $backadmin, 'HTML');
         step('add_password_panel', $from_id);
         savedata("save", "username", "null");
@@ -3577,8 +3577,8 @@ elseif ($datain == "systemsms") {
             $message = strtr($text_x_ui, $replace);
             sendmessage($from_id, $message, $optionX_ui_single, 'HTML');
         }
-    } elseif ($marzban_list_get['type'] == "mirza_agent") {
-        sendmessage($from_id, $textbotlang['users']['selectoption'], $option_mirza, 'HTML');
+    } elseif ($marzban_list_get['type'] == "rootbot_agent") {
+        sendmessage($from_id, $textbotlang['users']['selectoption'], $option_rootbot, 'HTML');
     } elseif ($marzban_list_get['type'] == "alireza_single") {
         $x_ui_check_connect = login($marzban_list_get['code_panel'], false);
         if ($x_ui_check_connect['success']) {
@@ -10911,16 +10911,16 @@ if ($datain == "settimecornday" && $adminrulecheck['rule'] == "administrator") {
     $list_panel_keyboard = ['inline_keyboard' => []];
     foreach ($list_panel as $result) {
         $list_panel_keyboard['inline_keyboard'][] = [
-            ['text' => $result['name_panel'], 'callback_data' => "set_panel_id_mirza:{$result['id']}:{$panel['id']}"],
+            ['text' => $result['name_panel'], 'callback_data' => "set_panel_id_rootbot:{$result['id']}:{$panel['id']}"],
         ];
     }
     sendmessage($from_id, $textbotlang['Admin']['addorder']['selectPanel'], json_encode($list_panel_keyboard), 'HTML');
-} elseif (preg_match('/set_panel_id_mirza:(.*):(.*)/', $datain, $dataget)) {
-    $panel_id_mirza = $dataget[1];
+} elseif (preg_match('/set_panel_id_rootbot:(.*):(.*)/', $datain, $dataget)) {
+    $panel_id_rootbot = $dataget[1];
     $panel_id = $dataget[2];
     deletemessage($from_id, $message_id);
-    update("marzban_panel", "inbounds", $panel_id_mirza, "id", $panel_id);
-    sendmessage($from_id, $textbotlang['Admin']['addorder']['panelSelected'], $option_mirza, 'HTML');
+    update("marzban_panel", "inbounds", $panel_id_rootbot, "id", $panel_id);
+    sendmessage($from_id, $textbotlang['Admin']['addorder']['panelSelected'], $option_rootbot, 'HTML');
 } elseif ($text == $textbotlang['bottext']['open_button']) {
     $bt_home = strtr($textbotlang['bottext']['home_text'], ['{lang}' => $textbotlang['bottext']['langs'][$user['lang']] ?? $bt_lang]);
     sendmessage($from_id, $bt_home, keyboard_list_text($user['lang']), 'HTML');

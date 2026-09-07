@@ -27,7 +27,7 @@ bash install.sh
 نام پیش‌فرض **Root Bot** است. برای نام دلخواه، قبل از اجرای PHP این متغیر را تنظیم کنید:
 
 ```bash
-export MIRZA_BRAND_NAME="نام ربات شما"
+export ROOTBOT_BRAND_NAME="نام ربات شما"
 ```
 
 در نصب معمولی نیازی به این کار نیست.

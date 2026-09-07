@@ -19,10 +19,10 @@ $configValue = static function (string $environment, string $fallback): string {
     return $value === false ? $fallback : (string) $value;
 };
 
-$dbhost = $configValue('MIRZA_DB_HOST', $dbhost);
-$dbname = $configValue('MIRZA_DB_NAME', $dbname);
-$usernamedb = $configValue('MIRZA_DB_USER', $usernamedb);
-$passworddb = $configValue('MIRZA_DB_PASSWORD', $passworddb);
+$dbhost = $configValue('ROOTBOT_DB_HOST', $dbhost);
+$dbname = $configValue('ROOTBOT_DB_NAME', $dbname);
+$usernamedb = $configValue('ROOTBOT_DB_USER', $usernamedb);
+$passworddb = $configValue('ROOTBOT_DB_PASSWORD', $passworddb);
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -36,10 +36,10 @@ try {
     error_log("Database connection failed: " . $e->getMessage());
     die("error: database connection failed");
 }
-$APIKEY = $configValue('MIRZA_TELEGRAM_BOT_TOKEN', $APIKEY);
-$adminnumber = $configValue('MIRZA_ADMIN_CHAT_ID', $adminnumber);
-$domainhosts = $configValue('MIRZA_DOMAIN', $domainhosts);
-$usernamebot = $configValue('MIRZA_BOT_USERNAME', $usernamebot);
-$brandname = $configValue('MIRZA_BRAND_NAME', $brandname);
+$APIKEY = $configValue('ROOTBOT_TELEGRAM_BOT_TOKEN', $APIKEY);
+$adminnumber = $configValue('ROOTBOT_ADMIN_CHAT_ID', $adminnumber);
+$domainhosts = $configValue('ROOTBOT_DOMAIN', $domainhosts);
+$usernamebot = $configValue('ROOTBOT_BOT_USERNAME', $usernamebot);
+$brandname = $configValue('ROOTBOT_BRAND_NAME', $brandname);
 
 ?>

@@ -2399,7 +2399,7 @@ f,n.n2',
 🔹 | همچنین اگر نیاز به <b>راهنمایی</b> یا کمک دارید، می‌توانید از طریق دایرکت با تیم پشتیبانی در ارتباط باشید.
 
 📩 | برای ارسال گزارش، پیشنهاد یا درخواست راهنمایی، در <b>گروه Root Bot</b> پیام بگذارید:
-<a href="https://t.me/mirzapanelgroup" rel="nofollow" target="_blank">Root Bot Group</a>',
+<a href="https://t.me/rootbotgroup" rel="nofollow" target="_blank">Root Bot Group</a>',
                         'aboutBot' => '💎 | Version Bot: %s
 📌 | Version Mini App: 0.1.1
 
@@ -4155,7 +4155,7 @@ f,n.n2',
                 'zarinPalMerchant' => 'مرچنت زرین پال',
                 'zeroBalance' => '0️⃣ صفر کردن موجودی',
                 'panelSetting' => '🎛 تنظیم پنل',
-                'mirzaAgentPanel' => 'نمایندگی Root Bot',
+                'rootbotAgentPanel' => 'نمایندگی Root Bot',
                 'setGroupName' => '🎛 تنظیم نام گروه',
                 'subLinkDomain' => '🔗 دامنه لینک ساب',
                 'panelTypeSanaei' => '3x-ui',
