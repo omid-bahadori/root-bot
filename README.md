@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤖 Mirza Bot
+# 🤖 Root Bot
 
 ### A powerful Telegram bot for selling VPN services — with fully automated config creation.
 
@@ -14,16 +14,16 @@
 </p>
 
 <p>
-  <a href="https://github.com/mahdiMGF2/mirzabot/stargazers">
-    <img src="https://img.shields.io/github/stars/mahdiMGF2/mirzabot?style=flat-square&color=f5c518" alt="Stars"/>
+  <a href="https://github.com/omid-bahadori/root-bot/stargazers">
+    <img src="https://img.shields.io/github/stars/omid-bahadori/root-bot?style=flat-square&color=f5c518" alt="Stars"/>
   </a>
-  <a href="https://github.com/mahdiMGF2/mirzabot/network/members">
-    <img src="https://img.shields.io/github/forks/mahdiMGF2/mirzabot?style=flat-square" alt="Forks"/>
+  <a href="https://github.com/omid-bahadori/root-bot/network/members">
+    <img src="https://img.shields.io/github/forks/omid-bahadori/root-bot?style=flat-square" alt="Forks"/>
   </a>
-  <a href="https://github.com/mahdiMGF2/mirzabot/issues">
-    <img src="https://img.shields.io/github/issues/mahdiMGF2/mirzabot?style=flat-square" alt="Issues"/>
+  <a href="https://github.com/omid-bahadori/root-bot/issues">
+    <img src="https://img.shields.io/github/issues/omid-bahadori/root-bot?style=flat-square" alt="Issues"/>
   </a>
-  <a href="https://github.com/mahdiMGF2/mirzabot/blob/main/LICENSE">
+  <a href="https://github.com/omid-bahadori/root-bot/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/mahdiMGF2/mirzabot?style=flat-square" alt="License"/>
   </a>
   <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP 8.2"/>
@@ -54,17 +54,17 @@
 
 ## ✨ Overview
 
-**Mirza Bot** is a feature-rich Telegram bot for selling VPN subscriptions and automating the entire sales workflow — from purchase and payment to config creation and service management.
+**Root Bot** is a feature-rich Telegram bot for selling VPN subscriptions and automating the entire sales workflow — from purchase and payment to config creation and service management.
 
 It connects directly to your panels, builds configurations automatically, accepts a wide range of payment methods, and gives both customers and admins a clean experience through a **Telegram Mini App** and a **web admin panel**.
 
-> Whether you're handing out trial accounts or running a large-scale reseller business, Mirza Bot has the tools to run it end to end.
+> Whether you're handing out trial accounts or running a large-scale reseller business, Root Bot has the tools to run it end to end.
 
 ---
 
 ## 🧩 Supported Panels
 
-Mirza Bot integrates with the most popular VPN and network management panels:
+Root Bot integrates with the most popular VPN and network management panels:
 
 | Panel | Panel |
 |-------|-------|
@@ -151,7 +151,7 @@ Mirza Bot integrates with the most popular VPN and network management panels:
 Run the following command on your server as **root**:
 
 ```bash
-curl -o install.sh -L https://raw.githubusercontent.com/mahdiMGF2/mirzabot/main/install.sh && bash install.sh
+curl -o install.sh -L https://raw.githubusercontent.com/omid-bahadori/root-bot/main/install.sh && bash install.sh
 ```
 
 An interactive menu will appear:
@@ -173,7 +173,7 @@ An interactive menu will appear:
 Run the same command and select **`2`**:
 
 ```bash
-curl -o install.sh -L https://raw.githubusercontent.com/mahdiMGF2/mirzabot/main/install.sh && bash install.sh
+curl -o install.sh -L https://raw.githubusercontent.com/omid-bahadori/root-bot/main/install.sh && bash install.sh
 ```
 
 ### Remove
@@ -245,7 +245,7 @@ mirza remove
 
 ## 🌍 Languages
 
-Mirza Bot ships with full translations for:
+Root Bot ships with full translations for:
 
 🇬🇧 English · 🇮🇷 Persian (فارسی) · 🇷🇺 Russian (Русский) · 🇨🇳 Chinese (中文)
 
@@ -253,7 +253,7 @@ Mirza Bot ships with full translations for:
 
 ## 💵 Support the Project
 
-If **Mirza Bot** helps your business, please consider supporting its development with a crypto donation:
+If **Root Bot** helps your business, please consider supporting its development with a crypto donation:
 
 <a href="https://nowpayments.io/donation/mahdi">
   <img src="https://img.shields.io/badge/Donate-NowPayments-1A1A2E?style=for-the-badge&logo=bitcoin&logoColor=white" alt="Donate"/>
@@ -265,10 +265,10 @@ Your support keeps the updates and improvements coming. Thank you! 🙌
 
 ## 👥 Contributors
 
-Thanks to everyone who has contributed to making Mirza Bot better:
+Thanks to everyone who has contributed to making Root Bot better:
 
-<a href="https://github.com/mahdiMGF2/mirzabot/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=mahdiMGF2/mirzabot" alt="Contributors"/>
+<a href="https://github.com/omid-bahadori/root-bot/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=omid-bahadori/root-bot" alt="Contributors"/>
 </a>
 
 ---
@@ -277,6 +277,6 @@ Thanks to everyone who has contributed to making Mirza Bot better:
 
 **Made with ❤️ by the Mirza Panel community**
 
-💬 [Channel](https://t.me/mirzapanel) · 👥 [Group](https://t.me/mirzapanelgroup) · ⭐ [Star on GitHub](https://github.com/mahdiMGF2/mirzabot)
+💬 [Channel](https://t.me/mirzapanel) · 👥 [Group](https://t.me/mirzapanelgroup) · ⭐ [Star on GitHub](https://github.com/omid-bahadori/root-bot)
 
 </div>

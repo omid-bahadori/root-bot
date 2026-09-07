@@ -9,7 +9,7 @@
 با SSH به سرور وصل شوید و این دستور را اجرا کنید:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/mahdiMGF2/mirzabot/main/install.sh -o install.sh
+curl -fsSL https://raw.githubusercontent.com/omid-bahadori/root-bot/main/install.sh -o install.sh
 bash install.sh
 ```
 
