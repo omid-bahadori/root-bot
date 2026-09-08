@@ -1,0 +1,46 @@
+<?php
+return function (PDO $pdo, $schema) {
+    $pdo->exec(<<<'SQL'
+CREATE TABLE IF NOT EXISTS `rootbot_wallets` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `user_id` VARCHAR(128) NOT NULL,
+  `balance` DECIMAL(20,2) NOT NULL DEFAULT 0,
+  `currency` VARCHAR(8) NOT NULL DEFAULT 'IRR',
+  `metadata` JSON NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY `user_id_idx` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `rootbot_orders` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `order_ref` VARCHAR(190) NOT NULL,
+  `user_id` VARCHAR(128) NOT NULL,
+  `service_id` VARCHAR(128) NOT NULL,
+  `amount` DECIMAL(20,2) NOT NULL DEFAULT 0,
+  `currency` VARCHAR(8) NOT NULL DEFAULT 'IRR',
+  `status` VARCHAR(32) NOT NULL DEFAULT 'pending',
+  `payload` JSON NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY `order_ref_idx` (`order_ref`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `rootbot_payments` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `payment_ref` VARCHAR(190) NOT NULL,
+  `order_ref` VARCHAR(190) NULL,
+  `user_id` VARCHAR(128) NULL,
+  `amount` DECIMAL(20,2) NOT NULL DEFAULT 0,
+  `currency` VARCHAR(8) NOT NULL DEFAULT 'IRR',
+  `gateway` VARCHAR(64) NULL,
+  `status` VARCHAR(32) NOT NULL DEFAULT 'pending',
+  `metadata` JSON NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY `payment_ref_idx` (`payment_ref`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+SQL
+
+);
+};
