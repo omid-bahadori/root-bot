@@ -89,6 +89,15 @@ if ($setting['inlinebtnmain'] == "oninline" && !empty($keyboardRows)) {
             if ($keyboard['text'] == "text_usertest") {
                 $trace_keyboard[$key][$keyboard_key]['callback_data'] = "usertestbtn";
             }
+            if (isset($trace_keyboard[$key][$keyboard_key]['callback_data'])) {
+                $trace_keyboard[$key][$keyboard_key]['style'] = match (
+                    $trace_keyboard[$key][$keyboard_key]['callback_data']
+                ) {
+                    'buy', 'Add_Balance', 'account' => 'success',
+                    'supportbtns', 'helpbtns' => 'primary',
+                    default => 'primary',
+                };
+            }
         }
     }
     if ($admin_idss != 0) {

@@ -17,7 +17,7 @@
         }
     },
     "scripts": {
-        "test": "php tests/smoke.php"
+        "test": "php tests/smoke.php && php tests/smoke_services.php && php tests/smoke_commerce.php"
     },
     "prefer-stable": true,
     "minimum-stability": "stable"

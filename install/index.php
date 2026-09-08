@@ -260,13 +260,45 @@ if ($action !== '') {
             ], 500);
         }
 
+        $panelCredentials = null;
+        try {
+            $panelRow = $pdo->query(
+                "SELECT username, password FROM admin ORDER BY username LIMIT 1"
+            )->fetch(PDO::FETCH_ASSOC);
+            if (is_array($panelRow) && !str_starts_with((string) $panelRow['password'], '$')) {
+                $panelCredentials = [
+                    'username' => (string) $panelRow['username'],
+                    'password' => (string) $panelRow['password'],
+                ];
+            }
+        } catch (Throwable $credentialsException) {
+            error_log('Panel credential display failed: ' . $credentialsException->getMessage());
+        }
+
+        $items = [
+            rootbot_install_item('ok', 'جداول دیتابیس', 'ساخته و به‌روزرسانی شد', 'جداول، ایندکس‌ها و مهاجرت‌ها اعمال شدند.'),
+            rootbot_install_item('ok', 'وبهوک تلگرام', 'در مرحله پایانی ست می‌شود'),
+        ];
+        if ($panelCredentials !== null) {
+            $items[] = rootbot_install_item(
+                'warn',
+                'ورود اولیه پنل',
+                $panelCredentials['username'] . ' / ' . $panelCredentials['password'],
+                'این رمز فقط یک‌بار نمایش داده می‌شود؛ پس از ورود از بخش تنظیمات آن را تغییر دهید.'
+            );
+        } else {
+            $items[] = rootbot_install_item(
+                'info',
+                'ورود پنل',
+                'رمز قبلی حفظ شد',
+                'برای تغییر رمز از تنظیمات پنل یا ابزار reset-panel-password.php استفاده کنید.'
+            );
+        }
+
         rootbot_install_json([
             'ok' => true,
             'error' => '',
-            'items' => [
-                rootbot_install_item('ok', 'جداول دیتابیس', 'ساخته و به‌روزرسانی شد', 'جداول، ایندکس‌ها و مهاجرت‌ها اعمال شدند.'),
-                rootbot_install_item('ok', 'وبهوک تلگرام', 'در مرحله پایانی ست می‌شود'),
-            ],
+            'items' => $items,
         ]);
     }
 
