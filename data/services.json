@@ -1,0 +1,52 @@
+{
+  "services": [
+    {
+      "id": "vpn",
+      "name": "VPN Subscription",
+      "category": "network",
+      "description": "Purchase VPN subscriptions with configurable duration and protocol.",
+      "pricing": { "type": "tiered", "tiers": [{"name":"1 month","price":0}] },
+      "enabled": true
+    },
+    {
+      "id": "apple_id",
+      "name": "Apple ID",
+      "category": "accounts",
+      "description": "Create or deliver Apple ID accounts.",
+      "pricing": { "type": "fixed", "amount": 0 },
+      "enabled": true
+    },
+    {
+      "id": "foreign_payment",
+      "name": "Foreign Currency Payment",
+      "category": "payments",
+      "description": "Handle EUR/USD payments via gateways.",
+      "pricing": { "type": "fee", "percent": 1.5 },
+      "enabled": true
+    },
+    {
+      "id": "phone_trade",
+      "name": "Phone Buy/Sell (Manual Price)",
+      "category": "market",
+      "description": "Create manual phone listings and negotiate prices.",
+      "pricing": { "type": "manual" },
+      "enabled": true
+    },
+    {
+      "id": "repair",
+      "name": "Phone Repair (Parts+Labor)",
+      "category": "repair",
+      "description": "Repair estimation based on model, parts and labor.",
+      "pricing": { "type": "calculator", "params": ["parts","model","labor"] },
+      "enabled": true
+    },
+    {
+      "id": "dev_services",
+      "name": "Programming Services",
+      "category": "services",
+      "description": "Custom programming services across languages and platforms.",
+      "pricing": { "type": "quote" },
+      "enabled": true
+    }
+  ]
+}
